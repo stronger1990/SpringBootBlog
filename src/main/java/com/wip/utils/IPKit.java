@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
  * ip工具类
  */
 public class IPKit {
-
     /**
      * 获取请求IP地址
      * @param request

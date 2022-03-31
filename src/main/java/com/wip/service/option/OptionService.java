@@ -35,7 +35,7 @@ public interface OptionService {
     void updateOptionByName(String name, String value);
 
     /**
-     * 通过名称获取网站配置
+     * 通过名称获取网站配置，比如备案号等
      * @param site_record
      * @return
      */

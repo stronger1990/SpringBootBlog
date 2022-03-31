@@ -10,55 +10,55 @@ package com.wip.dto;
  */
 public class StatisticsDto {
 
-    /**
-     * 文章数
-     */
-    private Long articles;
+	/**
+	 * 文章数
+	 */
+	private Long articles;
 
-    /**
-     * 评论数
-     */
-    private Long comments;
+	/**
+	 * 评论数
+	 */
+	private Long comments;
 
-    /**
-     * 链接数
-     */
-    private Long links;
+	/**
+	 * 链接数
+	 */
+	private Long links;
 
-    /**
-     * 文件数
-     */
-    private Long attachs;
+	/**
+	 * 文件数
+	 */
+	private Long attachs;
 
-    public Long getArticles() {
-        return articles;
-    }
+	public Long getArticles() {
+		return articles;
+	}
 
-    public void setArticles(Long articles) {
-        this.articles = articles;
-    }
+	public void setArticles(Long articles) {
+		this.articles = articles;
+	}
 
-    public Long getComments() {
-        return comments;
-    }
+	public Long getComments() {
+		return comments;
+	}
 
-    public void setComments(Long comments) {
-        this.comments = comments;
-    }
+	public void setComments(Long comments) {
+		this.comments = comments;
+	}
 
-    public Long getLinks() {
-        return links;
-    }
+	public Long getLinks() {
+		return links;
+	}
 
-    public void setLinks(Long links) {
-        this.links = links;
-    }
+	public void setLinks(Long links) {
+		this.links = links;
+	}
 
-    public Long getAttachs() {
-        return attachs;
-    }
+	public Long getAttachs() {
+		return attachs;
+	}
 
-    public void setAttachs(Long attachs) {
-        this.attachs = attachs;
-    }
+	public void setAttachs(Long attachs) {
+		this.attachs = attachs;
+	}
 }
