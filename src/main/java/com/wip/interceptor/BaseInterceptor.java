@@ -59,7 +59,6 @@ public class BaseInterceptor implements HandlerInterceptor {
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
-
 		// 请求URL不包含域名
 		String uri = request.getRequestURI();
 		// 日志输出
@@ -77,8 +76,10 @@ public class BaseInterceptor implements HandlerInterceptor {
 			}
 		}
 
+		// 如果user为空而且不是访问登录页，那就去登录
 		if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user && !uri.startsWith("/admin/css") && !uri.startsWith("/admin/images") && !uri.startsWith("/admin/js") && !uri.startsWith("/admin/plugins") && !uri.startsWith("/admin/editormd")) {
 			// 如果访问的是/admin，会重跳转到/admin/login，然后就不会再进入这里而是下面的判断了
+			LOGGER.info("重定向到/admin/login");
 			response.sendRedirect(request.getContextPath() + "/admin/login");
 			return false;
 		}

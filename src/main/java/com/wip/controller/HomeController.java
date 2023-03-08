@@ -49,9 +49,12 @@ public class HomeController extends BaseController {
 	private MetaService metaService;
 
 	@GetMapping(value = "/")
-	public String index(HttpServletRequest request, @ApiParam(name = "page", value = "页数", required = false) @RequestParam(name = "page", required = false, defaultValue = "1") int page, @ApiParam(name = "limit", value = "每页数量", required = false) @RequestParam(name = "limit", required = false, defaultValue = "5") int limit) {
-		PageInfo<ContentDomain> articles = contentService.getArticlesByCond(new ContentCond(), page, limit);
+	public String index(
+			HttpServletRequest request,
+			@ApiParam(name = "page", value = "页数", required = false) @RequestParam(name = "page", required = false, defaultValue = "1") int page,
+			@ApiParam(name = "limit", value = "每页数量", required = false) @RequestParam(name = "limit", required = false, defaultValue = "5") int limit) {
 
+		PageInfo<ContentDomain> articles = contentService.getArticlesByCond(new ContentCond(), page, limit);
 		request.setAttribute("articles", articles);
 		return "blog/home";
 	}

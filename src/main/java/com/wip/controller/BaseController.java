@@ -7,7 +7,7 @@ import com.wip.utils.TaleUtils;
 import javax.servlet.http.HttpServletRequest;
 
 public abstract class BaseController {
-
+	// 全局缓存，做个私人博客网站可以这样搞，想用就用，简单，如果是多人建博客那种就不能这样搞了，内存会爆，而且没Redis好用
 	protected MapCache cache = MapCache.single();
 
 	public BaseController title(HttpServletRequest request, String title) {

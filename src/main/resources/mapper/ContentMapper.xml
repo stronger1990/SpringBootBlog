@@ -156,6 +156,7 @@
         FROM
           <include refid="BASE_TABLE"/>
     </select>
+
     <!--通过分类获取文章-->
     <select id="getArticleByCategory" resultType="com.wip.model.ContentDomain">
         SELECT
